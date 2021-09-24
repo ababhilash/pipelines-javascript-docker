@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ababhilashpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ababhilashpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: ababhilashpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: ababhilashpipelinesjavascriptdocker 
+          image: myregistryinuse.azurecr.io/ababhilashpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
